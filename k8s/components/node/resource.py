@@ -25,7 +25,7 @@ class Node(Resource):
                 self.perf.UNSCHEDULABLE,
                 "Node {} is ready, but unschedulable".format(self.meta["name"]),
             )
-        elif cnd_type == "Ready":
+        elif cnd_type == "Ready" or cnd_type == "EtcdIsVoter":
             if cnd_status == "True":
                 return NaemonStatus(NaemonState.OK, self.perf.AVAILABLE)
             else:
