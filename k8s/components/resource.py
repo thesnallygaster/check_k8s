@@ -106,9 +106,9 @@ class Resource(ABC):
         :return: Formatted condition message
         """
 
-        return "{kind} {name}: {0} {1} since {2}".format(
+        return "{kind} {name}: {0} {1}{2}".format(
             "condition" if condition["status"] == "True" else "condition [not]",
             condition["type"],
-            condition["lastTransitionTime"],
+            f" since {condition.get('lastTransitionTime')}" if "lastTransitionTime" in condition else "",
             **self.meta
         )
