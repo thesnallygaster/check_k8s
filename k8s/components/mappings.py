@@ -1,4 +1,5 @@
 from .pod import check_pods
+from .daemonset import check_daemonsets
 from .deployment import check_deployments
 from .node import check_nodes
 
@@ -12,5 +13,6 @@ MAPPINGS = dict(
     # resource_name, (check_func, is_core)
     pods=(check_pods, True),
     nodes=(check_nodes, True),
+    daemonsets=(check_daemonsets, False),
     deployments=(check_deployments, False),
 )
