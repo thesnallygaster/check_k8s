@@ -2,6 +2,7 @@ from .pod import check_pods
 from .daemonset import check_daemonsets
 from .deployment import check_deployments
 from .node import check_nodes
+from .statefulset import check_statefulsets
 
 
 # Purpose
@@ -15,4 +16,5 @@ MAPPINGS = dict(
     nodes=(check_nodes, True),
     daemonsets=(check_daemonsets, False),
     deployments=(check_deployments, False),
+    statefulsets=(check_statefulsets, False),
 )
