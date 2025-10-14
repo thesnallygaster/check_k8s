@@ -2,6 +2,7 @@ from .pod import check_pods
 from .daemonset import check_daemonsets
 from .deployment import check_deployments
 from .node import check_nodes
+from .persistentvolumeclaim import check_persistentvolumeclaims
 from .statefulset import check_statefulsets
 
 
@@ -16,5 +17,6 @@ MAPPINGS = dict(
     nodes=(check_nodes, True),
     daemonsets=(check_daemonsets, False),
     deployments=(check_deployments, False),
+    persistentvolumeclaims=(check_persistentvolumeclaims, True),
     statefulsets=(check_statefulsets, False),
 )
