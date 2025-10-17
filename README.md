@@ -16,9 +16,9 @@ $ python3 check_k8s.py -h
 usage: check_k8s.py [-h] [--host HOST] [--token TOKEN]
                     [--token_file TOKEN_FILE] [--port PORT]
                     [--timeout TIMEOUT] [--insecure] [--debug] --resource
-                    {pods,nodes,deployments} [--namespace NAMESPACE]
-                    [--ignore EXPRESSIONS] [--selector SELECTOR]
-                    [--version]
+                    {pods,nodes,daemonsets,deployments,persistentvolumeclaims,statefulsets}
+                    [--namespace NAMESPACE] [--ignore EXPRESSIONS]
+                    [--selector SELECTOR] [--version]
 
 Checks health of a Kubernetes cluster
 
